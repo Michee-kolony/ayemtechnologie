@@ -1,0 +1,60 @@
+<div class="fixed flex justify-between bg-white  top-0  shadow-md left-0 right-0 z-40">
+   <div class="md:ml-5">
+     <img src="images/003.png" class="h-[70px] w-[70px]"/>
+   </div>
+   <div class="hidden gap-5 md:mr-5 md:flex text-[#29235C] text-sm">
+      <a class="py-5 cursor-pointer" routerLink="/accueil">Home</a>
+      <a class="py-5 cursor-pointer" routerLink="/about">About</a>
+      <a class="py-5 cursor-pointer" routerLink="/services">Services</a>
+      <a class="py-5 cursor-pointer" routerLink="/team">Equipe</a>
+      <a class="py-5 cursor-pointer" (click)="openmodal()">Contact</a>
+   </div>
+   <div class="mr-5 flex md:hidden">
+    <i class="fa-solid fa-bars text-[20px] mt-5  py-2 px-2" *ngIf="menumobile" (click)="togglemobile()"></i>
+    <span class="mt-4 py-2 px-2 text-[20px] duration-500" *ngIf="!menumobile" (click)="openmobile()">X</span>
+   </div>
+</div>
+
+
+<div *ngIf="!menumobile"  class="bg-white shadow-md fixed z-50 right-2 top-[12%] border  px-10 rounded-md py-5 block md:hidden">
+   <div  class="cursor-pointer px-5" routerLink="/accueil">Home</div>
+   <div  class="cursor-pointer px-5" routerLink="/about">About</div>
+   <div class="cursor-pointer px-5" routerLink="/services">Services</div>
+   <a class="px-5 cursor-pointer" routerLink="/team">Equipe</a>
+   <div class="cursor-pointer px-5" (click)="openmodal()">Contact</div>
+   
+</div>
+
+
+
+
+<div *ngIf="modal" class="fixed flex justify-center items-center inset-0  duration-500 text-center top-0 left-0 right-0 bottom-0 bg-black/50 z-50">
+ <div class="bg-white h-[550px] w-[400px] md:w-[600px] rounded-xl relative shadow-md">
+   <span class="absolute top-0 right-3 font-bold cursor-pointer py-2 px-5" (click)="closemodale()">X</span>
+    <h3 class="text-center mt-10 font-bold">Contactez-nous</h3>
+    <form class="mt-10">
+      <div class="relative mt-5">
+         <i class="fa-solid fa-user absolute top-[35%] left-[9%] md:left-[23%]"></i>
+         <input type="text" class="border border-black pl-10 px-10 h-[40px] w-[350px] rounded-md" placeholder="votre nom complet ou nom institution" />
+      </div>
+      <div class="relative mt-5">
+         <i class="fa-solid fa-envelope absolute top-[35%] left-[9%] md:left-[23%]"></i>
+         <input type="text" class="border border-black pl-10 px-10 h-[40px] w-[350px] rounded-md" placeholder="votre adresse éléctronique" />
+      </div>
+      <div class="relative mt-5">
+         <i class="fa-solid fa-phone absolute top-[35%] left-[9%] md:left-[23%]"></i>
+         <input type="text" class="border border-black pl-10 px-10 h-[40px] w-[350px] rounded-md" placeholder="votre numéro d'appel" />
+      </div>
+      <div class="relative mt-5">
+         <i class="fa-solid fa-question absolute top-[35%] left-[9%] md:left-[23%]"></i>
+         <textarea  class="border py-2 border-black pl-10  h-[80px] w-[350px] rounded-md" placeholder="Décrire votre demande de façon compréhensive" >
+         </textarea>
+      </div>
+      <div class="relative mt-5">
+         <button  class="px-5 py-3 border border-[#29235C] w-[350px] rounded-md hover:bg-[#29235C] hover:text-white">
+            Envoyer
+         </button>
+      </div>
+    </form>
+ </div>
+</div>

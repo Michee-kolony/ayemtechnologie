@@ -1,0 +1,16 @@
+.typewriter {
+    overflow: hidden; /* Ensures the text is hidden initially */
+    white-space: nowrap; /* Ensures the text doesn't wrap */ /* Center the text */
+    letter-spacing: .10em; /* Adds spacing between letters */
+    animation: typing 2.5s steps(40, end), blink-caret .60s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
