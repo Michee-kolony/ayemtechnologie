@@ -7,7 +7,7 @@
       <a class="py-5 cursor-pointer" routerLink="/about">About</a>
       <a class="py-5 cursor-pointer" routerLink="/services">Services</a>
       <a class="py-5 cursor-pointer" routerLink="/team">Equipe</a>
-      <a class="py-5 cursor-pointer" (click)="openmodal()">Contact</a>
+      <a class="py-5 cursor-pointer"  (click)="openmodal()">Contact</a>
    </div>
    <div class="mr-5 flex md:hidden">
     <i class="fa-solid fa-bars text-[20px] mt-5  py-2 px-2" *ngIf="menumobile" (click)="togglemobile()"></i>
@@ -21,7 +21,7 @@
    <div  class="cursor-pointer px-5" routerLink="/about">About</div>
    <div class="cursor-pointer px-5" routerLink="/services">Services</div>
    <a class="px-5 cursor-pointer" routerLink="/team">Equipe</a>
-   <div class="cursor-pointer px-5" (click)="openmodal()">Contact</div>
+   <div class="cursor-pointer px-5" (click)="openmodal()" (click)="openmobile()">Contact</div>
    
 </div>
 
@@ -55,6 +55,7 @@
             Envoyer
          </button>
       </div>
+      <p class="mt-5 text-[#29235C] text-sm">Décrivez-nous vos besoins ou votre projet</p>
     </form>
  </div>
 </div>
