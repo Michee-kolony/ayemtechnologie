@@ -25,7 +25,7 @@ export class TeamComponent implements OnInit{
         slidesPerView : 2
       },
       1024:{
-        slidesPerView : 4
+        slidesPerView : 3
       }
 
     },
